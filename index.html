@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsim Polozhani</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            color: whitesmoke;
+        }
+        body
+        {
+            margin-top: 80px;
+            margin-right: 200px;
+            margin-left: 200px;
+            font-size: 14pt;
+            background-color: rgb(30, 29, 29);
+        }
+        .general-info
+        {
+            background-color: rgb(43, 44, 44);
+            border-radius: 30px;
+            padding: 30px;
+            
+        }
+        .general-info-details{
+            display: flex;
+        }
+        div.profile-picture
+        {
+            max-width: 100px;
+        }
+        div.profile-picture img
+        {
+            width: 100%;
+            margin: 0;
+        }
+        .text ul li
+        {
+            list-style-type: none;
+            margin: 10px;
+            
+        }
+        #email{
+            display: none;
+        }
+        #phone
+        {
+            display: none;
+        }
+        div.contact-links
+        {
+            text-align: center;
+        }
+        .contact-links ul li{
+            list-style-type: none;
+            display:inline;
+            padding: 38px;
+            text-align: center;
+        }
+        .contact-links ul li a{
+            text-decoration: none;
+            
+        }
+        .contact-links ul li a:hover {
+            font-weight: bold;
+            
+        }
+        div.additional-info
+        {
+            margin-top: 50px;
+        }
+        h2{
+            padding-bottom: 10px;
+            
+            
+        }
+        #year
+        {
+            font-size: 12px;
+            margin-left: 20px;
+        }
+        @media only screen and (max-width: 1152px) {
+            body{
+                margin: 15px;
+            }
+            .general-info-details
+            {
+                display: block;
+                align-items: center;
+            }
+            .contact-links ul{
+                padding-inline-start: 0;
+                align-items: center;
+            }
+            .contact-links ul li{
+            list-style-type: none;
+            display: block;
+            padding-right: 0;
+            padding: 2px;
+            
+            text-align: center;
+            background-color: azure;
+            padding: 5px;
+            margin-top: 10px;
+            margin-left: 30%;
+            margin-right: 30%;
+            border-radius: 10px;
+            background-color: rgb(30, 29, 29);
+        }
+        .profile-picture{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container-1">
+        <div class="general-info">
+            <div class="general-info-details">
+                <div class="profile-picture">
+                    <img src="TM2.png" alt="Profile">
+                </div>
+
+                <div class="text">
+                    <ul>
+                        <li style="font-weight: bold;">Arsim Polozhani</li>
+                        <li>Software Engineer Student</li>
+                        <li>Ohrid, North Macedonia</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="contact-links">
+                <ul class="contact">
+                    <li ><a href="#" id="show-email">Email</a></li>
+                        <p id="email">pollozhaniarsim@gmail.com </p>
+                    <li><a href="#" id="show-phone">Phone</a></li>
+                        <p id="phone">+389 72 595 699</p>
+                    <li><a href="https://instagram.com/arsimpollozhani/">Instagram</a></li>
+                        
+                    <li><a href="https://x.com/cimipolozani">X</a></li>
+                        
+                    <li><a href="https://github.com/apolozani/student.github.io">Github</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="additional-info">
+            <div class="about-me">
+                <h2>About me</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse rerum enim corrupti temporibus nemo maxime vero cum adipisci, nam cupiditate repellendus impedit ex, numquam dolorum. Hic molestiae dignissimos ducimus ab.
+                </p>
+            </div>
+
+            <div class="documents">
+                <h2>Education</h2>
+                <p>
+                   <p>Student at Faculty of Computer Science and Engineering</p>
+                   <p id="year">2024 - 2028</p> 
+                </p>
+            </div>
+
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>AI/ML Engineer</li>
+                    <li>Software Architect</li>
+                    <li>Web Dev</li>
+                    <li>Network Engineer</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-size: small; text-align: center;">2024. Arsim Polozhani</p>
+    </footer>
+
+    
+<script>
+    document.getElementById("show-email").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the link from navigating
+        const infoText = document.getElementById("email");
+        if (infoText.style.display === "none") {
+            infoText.style.display = "block"; // Show the information
+        } else {
+            infoText.style.display = "none";  // Hide the information
+        }
+    });
+
+    document.getElementById("show-phone").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the link from navigating
+        const infoText = document.getElementById("phone");
+        if (infoText.style.display === "none") {
+            infoText.style.display = "block"; // Show the information
+        } else {
+            infoText.style.display = "none";  // Hide the information
+        }
+    });
+</script>
+</body>
+</html>
